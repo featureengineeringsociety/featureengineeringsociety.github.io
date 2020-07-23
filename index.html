@@ -7,10 +7,20 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
+html,body,h1,h2,h3,h4,h5 {font-family:"Lato", sans-serif}
 .mySlides {display:none}
 .w3-tag, .fa {cursor:pointer}
 .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+
+h5.small {
+  line-height: 0.7;
+  margin-left: 20px;
+}
+
+h5.big {
+  line-height: 1.8;
+}
+
 </style>
 <body>
 
@@ -24,6 +34,9 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
       <a href="#about" class="w3-button w3-block">About</a>
     </div>
     <div class="w3-col s3">
+      <a href="#news" class="w3-button w3-block">News</a>
+    </div>
+	<div class="w3-col s3">
       <a href="#contact" class="w3-button w3-block">Contact</a>
     </div>
   </div>
@@ -34,7 +47,9 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
   <div class="w3-panel">
     <h1><b>Feature Engineering Society</b></h1>
-
+	<h5 class="small"><b>A Global Organization Focused on the <em>Feature Engineering Layer</em>  of</b></h5>
+	<h5 class="small"><b>Data Science/Machine Learning/Artificial Intelligence</b></h5>
+	
   </div>
 
                            
@@ -60,7 +75,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
     </div> -->
 
     <!-- Slideshow next/previous buttons -->
-    <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+    <!--<div class="w3-container w3-dark-grey w3-padding w3-xlarge">
       <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
       <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
     
@@ -69,7 +84,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
         <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
         <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
       </div>
-    </div>
+    </div> -->
   </div> 
 
   <!-- Grid -->
@@ -82,10 +97,12 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 	  <h3>Ideation</h3>
 	  <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
 	</div>
+	
 	<div class="w3-third w3-grey w3-container w3-padding-16">
 	  <h3>Conference</h3>
 	  <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
 	</div>
+	
 	<div class="w3-third w3-dark-grey w3-container w3-padding-16">
 	  <h3>Consultation</h3>
 	  <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
@@ -154,17 +171,18 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
   <!-- Grid -->
   <div class="w3-row-padding" id="about">
+  
     <div class="w3-center w3-padding-64">
       <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Who We Are</span>
     </div>
 
     <div class="w3-third w3-margin-bottom">
       <div class="w3-card-4">
-        <img src="/w3images/team1.jpg" alt="John" style="width:100%">
+        <img src="./w3images/photo1.jpg" alt="Alex" style="width:100%">
         <div class="w3-container">
           <h3>Alex Bleakie PhD</h3>
           <p class="w3-opacity">Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Founder of the Feature Engineering Society.</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
       </div>
@@ -172,11 +190,11 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
     <div class="w3-third w3-margin-bottom">
       <div class="w3-card-4">
-        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+        <img src="./w3images/team2.jpg" alt="Mike" style="width:100%">
         <div class="w3-container">
           <h3>A</h3>
           <p class="w3-opacity">Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Founder of the Feature Engineering Society.</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
       </div>
@@ -184,16 +202,35 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 
     <div class="w3-third w3-margin-bottom">
       <div class="w3-card-4">
-        <img src="/w3images/team3.jpg" alt="Jane" style="width:100%">
+        <img src="./w3images/team3.jpg" alt="Jane" style="width:100%">
         <div class="w3-container">
           <h3>B</h3>
           <p class="w3-opacity">Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Founder of the Feature Engineering Society.</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
       </div>
     </div>
   </div>
+
+  
+  
+  <!-- News -->
+  <div class="w3-center w3-padding-64" id="news">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">News</span>
+  </div>
+
+	<div class="w3-container">
+          <p> 07/23/2020  Here is the recent news section.  We are planning on creating a schedule for a meetup/conference.</p>
+		  <p> Links to some background information on the subject </p>
+		  <p> <a href = "https://en.wikipedia.org/wiki/Feature_engineering">Wikipedia Feature Engineering</a> </p>
+		  <p> <a href = "https://machinelearningmastery.com/discover-feature-engineering-how-to-engineer-features-and-how-to-get-good-at-it/">Machine Learning Mastery</a> </p>
+		  <p> <a href = "https://towardsdatascience.com/feature-engineering-for-machine-learning-3a5e293a5114">Toward Data Science</a> </p>
+    </div>
+
+</div>
+
+
 
   <!-- Contact -->
   <div class="w3-center w3-padding-64" id="contact">
