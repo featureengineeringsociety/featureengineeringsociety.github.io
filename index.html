@@ -24,6 +24,25 @@ h5.big {
 </style>
 <body>
 
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
+
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+ <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+
+
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
@@ -263,8 +282,10 @@ h5.big {
       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="entry.162337436" id="entry.162337436" required>
     </div>
 
-    <button type="submit" name='submit' class="w3-button w3-block w3-black">Send</button>
 
+	<button type="submit" name='submit' class="g-recaptcha" data-sitekey="6LfHqLoZAAAAAMxcPp5FN6Q8GLjDoonLGVJTIAKM" data-callback='onSubmit' 
+		data-action='submit' >Send</button>
+	
   </form>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
@@ -324,12 +345,3 @@ function showDivs(n) {
 </html>
 <h6><br></h6>
 
-
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
-<script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed...');
-  });
-</script>
