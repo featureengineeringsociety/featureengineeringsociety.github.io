@@ -38,7 +38,7 @@ $('#gform').on('submit', function(e) {
  <script src="https://www.google.com/recaptcha/api.js"></script>
  <script>
    function onSubmit(token) {
-     document.getElementById("demo-form").submit();
+     document.getElementById("gform").submit();
    }
  </script>
 
@@ -283,9 +283,9 @@ $('#gform').on('submit', function(e) {
     </div>
 
 
-	<!-- <button type="submit" name='submit' class="g-recaptcha" data-sitekey="6LfHqLoZAAAAAMxcPp5FN6Q8GLjDoonLGVJTIAKM" data-callback='onSubmit' 
-		data-action='submit' >Send</button> -->
-	<button type="submit" name='submit' class="w3-button w3-block w3-black" >Send</button>
+	<button class="g-recaptcha" data-sitekey="6LfHqLoZAAAAAMxcPp5FN6Q8GLjDoonLGVJTIAKM" data-callback='onSubmit' 
+		data-action='submit' >Send</button>
+	<!-- <button type="submit" name='submit' class="w3-button w3-block w3-black" >Send</button> -->
   </form>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
