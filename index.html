@@ -241,6 +241,24 @@ h5.big {
     <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
   </div>
 
+  
+  https://docs.google.com/forms/d/e/1FAIpQLScmYF9wUeAeYxYk3P3BYYN8ur96hJvJUe7jebNTJgqczysZ9w/viewform?usp=pp_url&entry.399510861=Alex&entry.84204889=Bleakie&entry.213354727=alex.bleakie@gmail.com
+  
+  <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScmYF9wUeAeYxYk3P3BYYN8ur96hJvJUe7jebNTJgqczysZ9w/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+  First name:<br>
+  <input type="text" name="entry.399510861" id="entry.399510861"><br>
+  Last name:<br>
+  <input type="text" name="entry.84204889" id="entry.84204889">
+  Email:<br>
+  <input type="text" name="entry.213354727" id="entry.213354727">
+  <input type="submit" value="Submit">
+
+</form>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+
+  
   <form class="w3-container" method="post" >
     <div class="w3-section">
       <label>Name</label>
@@ -318,32 +336,11 @@ function showDivs(n) {
 <h6><br></h6>
 
 
-<?php
-
-if (isset($_POST['submit'])){
-		$contact_name=$_POST['Name'];
-		$contact_email=$_POST['Email'];
-		$contact_subject=$_POST['Subject'];
-		$contact_message=$_POST['Message'];
-		$to_email = 'info@seasonwarez.com'; //you can give email id to whom you need to send
-		$headers  = 'MIME-Version: 1.0' . "\r\n";
-		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$headers .= "From: ".$contact_email; //DONT GIVE SPACE IN "ABC"  //you can replace your value but no space.. if u give space you can get email in spam only..
-		$txt = "You have received an email from ".$contact_name.".\n\n".$contact_message;
-		
-		
-		$response = mail($to_email,$contact_subject,$txt,$headers);
-		if($response)
-		{
-			echo "Mail sent";
-		}
-		else
-		{
-			echo "Not sent.. Try later";
-		}
-		
-		header("Location: index.php?mailsend");
-
-}
-
-?>
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
